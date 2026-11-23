@@ -11,7 +11,7 @@ using System.Text;
 
 namespace Healthcare.Services;
 
-public class AuthService
+public class AuthService : IAuthService
 {
     private readonly HealthcareSystemContext _db;
     private readonly IConfiguration _config;
@@ -153,7 +153,7 @@ public class AuthService
         if (req.birth_date.HasValue)
         {
             age = DateTime.Today.Year - req.birth_date.Value.Year;
-            if (req.birth_date.Value.ToDateTime(TimeOnly.MinValue) > DateTime.Today.AddYears(-age.Value)) 
+            if (req.birth_date.Value.ToDateTime(TimeOnly.MinValue) > DateTime.Today.AddYears(-age.Value))
                 age--;
         }
 

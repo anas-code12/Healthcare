@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Healthcare.Services;
 
-public class ClinicService
+public class ClinicService : IClinicService
 {
     private readonly HealthcareSystemContext _context;
 

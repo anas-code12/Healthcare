@@ -9,9 +9,9 @@ namespace Healthcare.Controllers
     [Route("api/ministry")]
     public class MinistryController : ControllerBase
     {
-        private readonly MinistryService _service;
+        private readonly IMinistryService _service;
 
-        public MinistryController(MinistryService service)
+        public MinistryController(IMinistryService service)
         {
             _service = service;
         }

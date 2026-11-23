@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Healthcare.Services;
 
-public class AppointmentService
+public class AppointmentService : IAppointmentService
 {
     private readonly HealthcareSystemContext _context;
 
