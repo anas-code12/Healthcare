@@ -51,12 +51,11 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// Services
-builder.Services.AddScoped<AuthService>();
-builder.Services.AddScoped<PatientService>();
-builder.Services.AddScoped<AppointmentService>();
-builder.Services.AddScoped<ClinicService>(); // ✅ جديد
-
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IPatientService, PatientService>();
+builder.Services.AddScoped<IAppointmentService, AppointmentService>();
+builder.Services.AddScoped<IClinicService, ClinicService>();
+builder.Services.AddScoped<IMinistryService, MinistryService>();
 // CORS
 builder.Services.AddCors(options =>
 {
@@ -104,7 +103,6 @@ builder.Services
     });
 
 builder.Services.AddAuthorization();
-builder.Services.AddScoped<MinistryService>();
 
 var app = builder.Build();
 

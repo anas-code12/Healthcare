@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Healthcare.Services
 {
-    public class MinistryService
+    public class MinistryService : IMinistryService
     {
         private readonly HealthcareSystemContext _db;
         private readonly IConfiguration _config;

@@ -12,9 +12,9 @@ namespace Healthcare.Controllers;
 [Route("api/[controller]")]
 public class AppointmentController : ControllerBase
 {
-    private readonly AppointmentService _service;
+    private readonly IAppointmentService _service;
 
-    public AppointmentController(AppointmentService service)
+    public AppointmentController(IAppointmentService service)
     {
         _service = service;
     }

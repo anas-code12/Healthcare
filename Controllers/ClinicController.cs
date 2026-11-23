@@ -11,9 +11,9 @@ namespace Healthcare.Controllers;
 [Route("api/[controller]")]
 public class ClinicController : ControllerBase
 {
-    private readonly ClinicService _service;
+    private readonly IClinicService _service;
 
-    public ClinicController(ClinicService service)
+    public ClinicController(IClinicService service)
     {
         _service = service;
     }

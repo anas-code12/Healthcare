@@ -8,9 +8,9 @@ namespace Healthcare.Controllers
     [Route("api/auth/patient")]
     public class PatientAuthController : ControllerBase
     {
-        private readonly AuthService _auth;
+        private readonly IAuthService _auth;
 
-        public PatientAuthController(AuthService auth)
+        public PatientAuthController(IAuthService auth)
         {
             _auth = auth;
         }
